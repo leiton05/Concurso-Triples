@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Concurso de Triples</title>
-    <link rel="stylesheet" href="Styles/style.css" />
+    <script type="module" src="Scripts/main.js"></script>
+    <link rel="stylesheet" href="Public/Styles/style.css" />
 </head>
 <body>
     <!-- Header -->
@@ -32,6 +33,7 @@
         <div>
             <button id="btn-procesar" type="button">Procesar</button>
             <button id="btn-limpiar" type="button">Limpiar</button>
+            <button id="btn-ejemplo" type="button">Cargar Ejemplo</button>
         </div>
     </section>
 
@@ -41,27 +43,10 @@
 
         <!-- Texto plano -->
         <div>
-        <label for="salida-texto">Salida formateada:</label>
+        <label for="salida-texto">Lista de posiciones:</label>
         <textarea id="salida-texto" rows="6" cols="80" readonly aria-live="polite"></textarea>
         </div>
 
-        <!-- Tabla estructurada -->
-        <div>
-        <h3>Detalle de jugadores</h3>
-        <table id="tabla-resultados">
-            <thead>
-            <tr>
-                <th scope="col">Posición</th>
-                <th scope="col">Jugador</th>
-                <th scope="col">Puntos</th>
-                <th scope="col">Money Balls</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- Filas generadas dinámicamente -->
-            </tbody>
-        </table>
-        </div>
     </section>
     </main>
 
@@ -70,8 +55,6 @@
         <p>Proyecto Final — EDyA1</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="util.js" defer></script>
-    <script src="main.js" defer></script>
+
 </body>
 </html>
