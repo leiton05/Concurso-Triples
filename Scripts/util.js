@@ -97,6 +97,40 @@ export default class Util {
    * Valida que los jugadores existan y las rondas tengan sentido.
    */
   static validarConcurso(jugadores, rondas) {
+  // --- Restricción n >= 3 ---
+    if (jugadores.length < 3) {
+      throw new Error(`Debe haber al menos 3 jugadores (n≥3). Se encontraron ${jugadores.length}.`);
+    }
+
+    // Agrupar rondas por jugador para determinar m y p
+    const rondasPorJugador = {};
+    for (const ronda of rondas) {
+      if (!rondasPorJugador[ronda.player]) {
+        rondasPorJugador[ronda.player] = [];
+      }
+      rondasPorJugador[ronda.player].push(ronda);
+    }
+
+    // Verificar cada jugador
+    for (const [nombre, intentos] of Object.entries(rondasPorJugador)) {
+      // --- Restricción m ≥ 5 ---
+      if (intentos.length < 5) {
+        throw new Error(
+          `El jugador "${nombre}" tiene solo ${intentos.length} posiciones (m≥5).`
+        );
+      }
+
+      // --- Restricción p ≥ 5 ---
+      for (const [i, ronda] of intentos.entries()) {
+        if (ronda.balls.length < 5) {
+          throw new Error(
+            `En la posición ${i + 1} del jugador "${nombre}" hay solo ${ronda.balls.length} balones (p≥5).`
+          );
+        }
+      }
+    }
+
+    // Verificar que todos los jugadores en rondas existan en la lista inicial
     const setJugadores = new Set(jugadores.map((j) => j.toLowerCase()));
     for (const ronda of rondas) {
       if (!setJugadores.has(ronda.player.toLowerCase())) {
@@ -106,6 +140,7 @@ export default class Util {
       }
     }
   }
+
 
 
 
