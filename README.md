@@ -15,14 +15,15 @@ Aplicativo web desarrollado como parte de la tarea final del curso Estructuras d
 
 CONCURSOTRIPLES/
 ├── Public/
-│   ├── index.html
 │   └── Styles/
 │       └── style.css
 ├── Scripts/
-│   ├── util.js              # Función resolverConcursoTriples(concurso)
-│   ├── ui.js                # Renderizado dinámico en el DOM
-│   └── main.js              # Controlador de eventos y flujo
-├── package.json
+│   ├── algoritmos.js              
+│   ├── main.js                
+│   └── util.js              
+├── .gitignore
+├──index.html
+├──README.md
 └── TareaFinal_EDyA1_2053_3.pdf
 
 
