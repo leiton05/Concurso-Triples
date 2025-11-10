@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Concurso de Triples</title>
+    <script type="module" src="Scripts/main.js"></script>
+    <link rel="stylesheet" href="Public/Styles/style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🏀 Concurso de Triples 🏀</h1>
+        <p>Ingresa la cadena del concurso y obtén los resultados automáticamente.</p>
+    </header>
+
+    <!-- Main -->
+    <main>
+    <!-- Entrada -->
+    <section id="entrada" aria-labelledby="entrada-titulo">
+        <h2 id="entrada-titulo">Entrada</h2>
+        <p>Introduce la cadena que representa los jugadores y sus lanzamientos.</p>
+        <br/>
+        <label for="concurso-input">Cadena del concurso:</label>
+        <textarea
+            id="concurso-input"
+            name="concurso"
+            rows="6"
+            cols="80"
+        >Scotty,Michael,Charles--Michael:0 1 1 0 1*Scotty:0 1 1 0 1*Charles:0 1 1 0 1*Scotty:0 1 1 0 0*Scotty:0 1 0 1 1*Charles:0 0 1 0 1*Michael:0 1 1 0 1*Charles:1 1 1 0 0*Charles:1 1 0 0 1*Michael:0 1 1 0 0*Scotty:0 0 1 1 0*Charles:1 0 0 1 1*Michael:0 1 1 0 1*Scotty:1 1 1 1 1*Michael:1 1 1 1 1</textarea>
+        </textarea>
+        <br><br/>
+        <div>
+            <button id="btn-procesar" type="button">Procesar</button>
+            <button id="btn-limpiar" type="button">Limpiar</button>
+            <button id="btn-ejemplo" type="button">Cargar Ejemplo</button>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section id="resultados" aria-labelledby="resultados-titulo">
+        <h2 id="resultados-titulo">Resultados</h2>
+
+        <!-- Texto plano -->
+        <div>
+        <label for="salida-texto">Lista de posiciones:</label>
+        <textarea id="salida-texto" rows="6" cols="80" readonly aria-live="polite"></textarea>
+        </div>
+
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Proyecto Final — EDyA1</p>
+    </footer>
+
+
+</body>
+</html>
