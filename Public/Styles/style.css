@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(#fffaf6 60%, #ffc596 100%);
+    background: (#fffaf6 60%, #ffc596 100%);
     padding: 2rem;
     line-height: 1.6;
 }
@@ -152,8 +152,8 @@ footer {
     text-align: center;
     margin-top: auto;
     padding-top: 1.5rem;
-    border-top: 4px solid #ffffff;
-    color: #ffffff;
+    border-top: 4px solid #ff7b00;
+    color: #999999;
     font-size: 1.2rem;
     letter-spacing: 0.3px;
 }
