@@ -157,7 +157,7 @@ export default class Util {
        * una que va antes del : y otra que va despues, que quedan guardadas en [nombre, tirosStr] respectivamente
        */
       .map((bloque) => {
-        const [nombre, tirosStr] = bloque.split(":");
+        const [nombre, tirosStr] = bloque.split(":");    //separa el nombre y los  tiros
         // Valida que no falte dicho apartado, sino tira error
         if (!nombre || !tirosStr) {
           throw new Error(`Formato inválido en el bloque: "${bloque}"`);
