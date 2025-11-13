@@ -196,7 +196,8 @@ export default class Util {
            * 
            * Entonces rondas queda como el valor de dicho objeto
            */
-        return { player: nombre.trim(), balls: tiros };
+        return { player: nombre.trim(), balls: tiros }; //retornan los objetos
+    
       });
 
     /**
